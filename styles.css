@@ -1,0 +1,123 @@
+body {
+    background: #1a1a1a url('prison_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 10px;
+    touch-action: manipulation;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-item {
+    background: rgba(50, 50, 50, 0.9);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.btn-upgrade {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.character {
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.1s;
+    border: 3px solid #666;
+    border-radius: 10px;
+}
+
+.character:active {
+    transform: scale(0.95);
+}
+
+.click-effect {
+    position: absolute;
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 24px;
+    pointer-events: none;
+    animation: floatUp 1s ease-out;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100px); opacity: 0; }
+}
+
+.upgrades-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #2c3e50;
+    margin: 20% auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.upgrade-item {
+    background: #34495e;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.upgrade-item:hover {
+    background: #3d566e;
+}
+
+.modal-close {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
